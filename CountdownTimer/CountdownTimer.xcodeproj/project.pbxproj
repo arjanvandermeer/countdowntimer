@@ -6,102 +6,119 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5940721124B0EA08006F233F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940721024B0EA08006F233F /* main.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		5940720B24B0EA08006F233F /* CopyFiles */ = {
+		5919D12F258FC74600EDC9E4 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5940721024B0EA08006F233F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		59892FBB24B25C6700485CEF /* testURL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testURL; sourceTree = BUILT_PRODUCTS_DIR; };
-		59892FC124B25D5C00485CEF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		59892FF624B2696000485CEF /* testURL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = testURL.entitlements; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/testURL.entitlements"; sourceTree = "<group>"; };
+		5919D100258FC74200EDC9E4 /* CountdownTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountdownTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5919D109258FC74400EDC9E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5919D10B258FC74400EDC9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5919D115258FC74400EDC9E4 /* CountdownTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerApp.swift; sourceTree = "<group>"; };
+		5919D117258FC74400EDC9E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5919D119258FC74400EDC9E4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5919D11B258FC74400EDC9E4 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		5919D11D258FC74500EDC9E4 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5919D11F258FC74500EDC9E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5919D122258FC74600EDC9E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5919D124258FC74600EDC9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5919D125258FC74600EDC9E4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		5940720A24B0EA08006F233F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		5940720424B0EA08006F233F = {
+		5919D0F9258FC74200EDC9E4 = {
 			isa = PBXGroup;
 			children = (
-				5940720F24B0EA08006F233F /* testURL */,
-				59892FBB24B25C6700485CEF /* testURL */,
-				59892FC024B25D5C00485CEF /* Frameworks */,
+				5919D108258FC74300EDC9E4 /* CountdownTimer WatchKit App */,
+				5919D114258FC74400EDC9E4 /* CountdownTimer WatchKit Extension */,
+				5919D101258FC74200EDC9E4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5940720F24B0EA08006F233F /* testURL */ = {
+		5919D101258FC74200EDC9E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59892FF624B2696000485CEF /* testURL.entitlements */,
-				5940721024B0EA08006F233F /* main.swift */,
+				5919D100258FC74200EDC9E4 /* CountdownTimer.app */,
 			);
-			path = testURL;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		59892FC024B25D5C00485CEF /* Frameworks */ = {
+		5919D108258FC74300EDC9E4 /* CountdownTimer WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				59892FC124B25D5C00485CEF /* CloudKit.framework */,
+				5919D109258FC74400EDC9E4 /* Assets.xcassets */,
+				5919D10B258FC74400EDC9E4 /* Info.plist */,
 			);
-			name = Frameworks;
+			path = "CountdownTimer WatchKit App";
+			sourceTree = "<group>";
+		};
+		5919D114258FC74400EDC9E4 /* CountdownTimer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5919D115258FC74400EDC9E4 /* CountdownTimerApp.swift */,
+				5919D117258FC74400EDC9E4 /* ContentView.swift */,
+				5919D119258FC74400EDC9E4 /* NotificationController.swift */,
+				5919D11B258FC74400EDC9E4 /* NotificationView.swift */,
+				5919D11D258FC74500EDC9E4 /* ComplicationController.swift */,
+				5919D11F258FC74500EDC9E4 /* Assets.xcassets */,
+				5919D124258FC74600EDC9E4 /* Info.plist */,
+				5919D125258FC74600EDC9E4 /* PushNotificationPayload.apns */,
+				5919D121258FC74600EDC9E4 /* Preview Content */,
+			);
+			path = "CountdownTimer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		5919D121258FC74600EDC9E4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5919D122258FC74600EDC9E4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5940720C24B0EA08006F233F /* testURL */ = {
+		5919D0FF258FC74200EDC9E4 /* CountdownTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5940721424B0EA08006F233F /* Build configuration list for PBXNativeTarget "testURL" */;
+			buildConfigurationList = 5919D130258FC74600EDC9E4 /* Build configuration list for PBXNativeTarget "CountdownTimer" */;
 			buildPhases = (
-				5940720924B0EA08006F233F /* Sources */,
-				5940720A24B0EA08006F233F /* Frameworks */,
-				5940720B24B0EA08006F233F /* CopyFiles */,
+				5919D0FE258FC74200EDC9E4 /* Resources */,
+				5919D12F258FC74600EDC9E4 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = testURL;
-			productName = testURL;
-			productReference = 59892FBB24B25C6700485CEF /* testURL */;
-			productType = "com.apple.product-type.tool";
+			name = CountdownTimer;
+			productName = CountdownTimer;
+			productReference = 5919D100258FC74200EDC9E4 /* CountdownTimer.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5940720524B0EA08006F233F /* Project object */ = {
+		5919D0FA258FC74200EDC9E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = "Arjan van der Meer";
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					5940720C24B0EA08006F233F = {
-						CreatedOnToolsVersion = 11.5;
+					5919D0FF258FC74200EDC9E4 = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
-			buildConfigurationList = 5940720824B0EA08006F233F /* Build configuration list for PBXProject "testURL" */;
+			buildConfigurationList = 5919D0FD258FC74200EDC9E4 /* Build configuration list for PBXProject "CountdownTimer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,29 +126,28 @@
 				en,
 				Base,
 			);
-			mainGroup = 5940720424B0EA08006F233F;
-			productRefGroup = 5940720424B0EA08006F233F;
+			mainGroup = 5919D0F9258FC74200EDC9E4;
+			productRefGroup = 5919D101258FC74200EDC9E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5940720C24B0EA08006F233F /* testURL */,
+				5919D0FF258FC74200EDC9E4 /* CountdownTimer */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		5940720924B0EA08006F233F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		5919D0FE258FC74200EDC9E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5940721124B0EA08006F233F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXSourcesBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5940721224B0EA08006F233F /* Debug */ = {
+		5919D126258FC74600EDC9E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -182,17 +198,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+				"WATCHOS_DEPLOYMENT_TARGET[arch=*]" = "";
 			};
 			name = Debug;
 		};
-		5940721324B0EA08006F233F /* Release */ = {
+		5919D127258FC74600EDC9E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,40 +254,37 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
-		5940721524B0EA08006F233F /* Debug */ = {
+		5919D131258FC74600EDC9E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = testURL/testURL.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = testURL/main.swift;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RH3P6FM765;
-				ENABLE_HARDENED_RUNTIME = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vdmholding.testURL;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vdmholding.CountdownTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		5940721624B0EA08006F233F /* Release */ = {
+		5919D132258FC74600EDC9E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = testURL/testURLRelease.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = testURL/main.swift;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RH3P6FM765;
-				ENABLE_HARDENED_RUNTIME = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vdmholding.testURL;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vdmholding.CountdownTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -279,25 +293,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5940720824B0EA08006F233F /* Build configuration list for PBXProject "testURL" */ = {
+		5919D0FD258FC74200EDC9E4 /* Build configuration list for PBXProject "CountdownTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5940721224B0EA08006F233F /* Debug */,
-				5940721324B0EA08006F233F /* Release */,
+				5919D126258FC74600EDC9E4 /* Debug */,
+				5919D127258FC74600EDC9E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5940721424B0EA08006F233F /* Build configuration list for PBXNativeTarget "testURL" */ = {
+		5919D130258FC74600EDC9E4 /* Build configuration list for PBXNativeTarget "CountdownTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5940721524B0EA08006F233F /* Debug */,
-				5940721624B0EA08006F233F /* Release */,
+				5919D131258FC74600EDC9E4 /* Debug */,
+				5919D132258FC74600EDC9E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5940720524B0EA08006F233F /* Project object */;
+	rootObject = 5919D0FA258FC74200EDC9E4 /* Project object */;
 }

@@ -10,15 +10,8 @@
 		593059F525910AE6002D2D79 /* CountdownTimer3 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 593059F425910AE6002D2D79 /* CountdownTimer3 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		593059FA25910AE8002D2D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 593059F925910AE8002D2D79 /* Assets.xcassets */; };
 		59305A0125910AE9002D2D79 /* CountdownTimer3 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 59305A0025910AE9002D2D79 /* CountdownTimer3 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		59305A0625910AE9002D2D79 /* CountdownTimer3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0525910AE9002D2D79 /* CountdownTimer3App.swift */; };
-		59305A0825910AE9002D2D79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0725910AE9002D2D79 /* ContentView.swift */; };
-		59305A0A25910AE9002D2D79 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0925910AE9002D2D79 /* NotificationController.swift */; };
-		59305A0C25910AE9002D2D79 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0B25910AE9002D2D79 /* NotificationView.swift */; };
-		59305A0E25910AEA002D2D79 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0D25910AEA002D2D79 /* ComplicationController.swift */; };
 		59305A1025910AEB002D2D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59305A0F25910AEB002D2D79 /* Assets.xcassets */; };
 		59305A1325910AEB002D2D79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59305A1225910AEB002D2D79 /* Preview Assets.xcassets */; };
-		59305A2725911B07002D2D79 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A2625911B07002D2D79 /* CalendarEvent.swift */; };
-		59305A2C25914383002D2D79 /* isHiddenViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */; };
 		5955ED1725920008002551E4 /* hourglass.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED1625920008002551E4 /* hourglass.png */; };
 		5955ED2A2592026E002551E4 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED1B2592026D002551E4 /* Icon-App-29x29@2x.png */; };
 		5955ED2B2592026E002551E4 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED1C2592026D002551E4 /* iTunesArtwork@1x.png */; };
@@ -35,9 +28,16 @@
 		5955ED362592026E002551E4 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED272592026E002551E4 /* Icon-App-76x76@1x.png */; };
 		5955ED372592026E002551E4 /* Icon-App-60x60@2x-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED282592026E002551E4 /* Icon-App-60x60@2x-2.png */; };
 		5955ED382592026E002551E4 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED292592026E002551E4 /* Icon-App-29x29@1x.png */; };
-		59634E4A2592A206000ACAA8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59634E492592A206000ACAA8 /* ColorExtension.swift */; };
+		5981BEF32598F18D008EADE3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985FEBC2593AA55006E3E37 /* SettingsView.swift */; };
+		5981BEF82598F191008EADE3 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59634E492592A206000ACAA8 /* ColorExtension.swift */; };
+		5981BEFD2598F196008EADE3 /* CountdownTimer3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0525910AE9002D2D79 /* CountdownTimer3App.swift */; };
+		5981BF022598F19B008EADE3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0D25910AEA002D2D79 /* ComplicationController.swift */; };
+		5981BF072598F19D008EADE3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0925910AE9002D2D79 /* NotificationController.swift */; };
+		5981BF0C2598F1A0008EADE3 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0B25910AE9002D2D79 /* NotificationView.swift */; };
+		5981BF112598F1A2008EADE3 /* isHiddenViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */; };
+		5981BF162598F1A5008EADE3 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A2625911B07002D2D79 /* CalendarEvent.swift */; };
+		5981BF1B2598F1A7008EADE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0725910AE9002D2D79 /* ContentView.swift */; };
 		5985FEB3259385D1006E3E37 /* CountdownTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985FEB2259385D1006E3E37 /* CountdownTimerTests.swift */; };
-		5985FEBD2593AA55006E3E37 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985FEBC2593AA55006E3E37 /* SettingsView.swift */; };
 		59DA625525923C44005814AC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DA625425923C44005814AC /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,17 +121,6 @@
 		5985FEB2259385D1006E3E37 /* CountdownTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerTests.swift; sourceTree = "<group>"; };
 		5985FEB4259385D1006E3E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5985FEBC2593AA55006E3E37 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		59DA621A25923BC7005814AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59DA621C25923BC8005814AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59DA622625923BC8005814AC /* CountdownTimer3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer3App.swift; sourceTree = "<group>"; };
-		59DA622825923BC8005814AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		59DA622A25923BC8005814AC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		59DA622C25923BC8005814AC /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		59DA622E25923BC8005814AC /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		59DA623025923BC9005814AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		59DA623325923BC9005814AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		59DA623525923BC9005814AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59DA623625923BC9005814AC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		59DA624F25923C3C005814AC /* CountdownTimer3 WatchKit ExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CountdownTimer3 WatchKit ExtensionRelease.entitlements"; sourceTree = "<group>"; };
 		59DA625425923C44005814AC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -160,8 +149,6 @@
 			children = (
 				593059F825910AE6002D2D79 /* CountdownTimer3 WatchKit App */,
 				59305A0425910AE9002D2D79 /* CountdownTimer3 WatchKit Extension */,
-				59DA621925923BC7005814AC /* CountdownTimer WatchKit App */,
-				59DA622525923BC8005814AC /* CountdownTimer WatchKit Extension */,
 				5985FEB1259385D1006E3E37 /* CountdownTimerTests */,
 				593059F125910AE5002D2D79 /* Products */,
 				59DA625325923C44005814AC /* Frameworks */,
@@ -207,19 +194,19 @@
 		59305A0425910AE9002D2D79 /* CountdownTimer3 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				5985FEBC2593AA55006E3E37 /* SettingsView.swift */,
+				59305A2625911B07002D2D79 /* CalendarEvent.swift */,
 				59DA624F25923C3C005814AC /* CountdownTimer3 WatchKit ExtensionRelease.entitlements */,
-				59634E492592A206000ACAA8 /* ColorExtension.swift */,
-				59305A0525910AE9002D2D79 /* CountdownTimer3App.swift */,
 				59305A0725910AE9002D2D79 /* ContentView.swift */,
 				59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */,
-				59305A2625911B07002D2D79 /* CalendarEvent.swift */,
-				59305A0925910AE9002D2D79 /* NotificationController.swift */,
 				59305A0B25910AE9002D2D79 /* NotificationView.swift */,
 				59305A0D25910AEA002D2D79 /* ComplicationController.swift */,
+				59305A1525910AEC002D2D79 /* PushNotificationPayload.apns */,
+				59305A0925910AE9002D2D79 /* NotificationController.swift */,
+				59634E492592A206000ACAA8 /* ColorExtension.swift */,
+				59305A0525910AE9002D2D79 /* CountdownTimer3App.swift */,
+				5985FEBC2593AA55006E3E37 /* SettingsView.swift */,
 				59305A0F25910AEB002D2D79 /* Assets.xcassets */,
 				59305A1425910AEC002D2D79 /* Info.plist */,
-				59305A1525910AEC002D2D79 /* PushNotificationPayload.apns */,
 				59305A1125910AEB002D2D79 /* Preview Content */,
 			);
 			path = "CountdownTimer3 WatchKit Extension";
@@ -240,39 +227,6 @@
 				5985FEB4259385D1006E3E37 /* Info.plist */,
 			);
 			path = CountdownTimerTests;
-			sourceTree = "<group>";
-		};
-		59DA621925923BC7005814AC /* CountdownTimer WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				59DA621A25923BC7005814AC /* Assets.xcassets */,
-				59DA621C25923BC8005814AC /* Info.plist */,
-			);
-			path = "CountdownTimer WatchKit App";
-			sourceTree = "<group>";
-		};
-		59DA622525923BC8005814AC /* CountdownTimer WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				59DA622625923BC8005814AC /* CountdownTimer3App.swift */,
-				59DA622825923BC8005814AC /* ContentView.swift */,
-				59DA622A25923BC8005814AC /* NotificationController.swift */,
-				59DA622C25923BC8005814AC /* NotificationView.swift */,
-				59DA622E25923BC8005814AC /* ComplicationController.swift */,
-				59DA623025923BC9005814AC /* Assets.xcassets */,
-				59DA623525923BC9005814AC /* Info.plist */,
-				59DA623625923BC9005814AC /* PushNotificationPayload.apns */,
-				59DA623225923BC9005814AC /* Preview Content */,
-			);
-			path = "CountdownTimer WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		59DA623225923BC9005814AC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				59DA623325923BC9005814AC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		59DA625325923C44005814AC /* Frameworks */ = {
@@ -453,15 +407,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59305A0A25910AE9002D2D79 /* NotificationController.swift in Sources */,
-				59305A0825910AE9002D2D79 /* ContentView.swift in Sources */,
-				59305A0E25910AEA002D2D79 /* ComplicationController.swift in Sources */,
-				5985FEBD2593AA55006E3E37 /* SettingsView.swift in Sources */,
-				59634E4A2592A206000ACAA8 /* ColorExtension.swift in Sources */,
-				59305A0625910AE9002D2D79 /* CountdownTimer3App.swift in Sources */,
-				59305A2725911B07002D2D79 /* CalendarEvent.swift in Sources */,
-				59305A0C25910AE9002D2D79 /* NotificationView.swift in Sources */,
-				59305A2C25914383002D2D79 /* isHiddenViewExtension.swift in Sources */,
+				5981BF072598F19D008EADE3 /* NotificationController.swift in Sources */,
+				5981BEF32598F18D008EADE3 /* SettingsView.swift in Sources */,
+				5981BF162598F1A5008EADE3 /* CalendarEvent.swift in Sources */,
+				5981BF022598F19B008EADE3 /* ComplicationController.swift in Sources */,
+				5981BEF82598F191008EADE3 /* ColorExtension.swift in Sources */,
+				5981BF1B2598F1A7008EADE3 /* ContentView.swift in Sources */,
+				5981BEFD2598F196008EADE3 /* CountdownTimer3App.swift in Sources */,
+				5981BF0C2598F1A0008EADE3 /* NotificationView.swift in Sources */,
+				5981BF112598F1A2008EADE3 /* isHiddenViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

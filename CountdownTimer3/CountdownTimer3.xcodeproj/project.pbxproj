@@ -100,6 +100,7 @@
 		59305A1525910AEC002D2D79 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		59305A2625911B07002D2D79 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isHiddenViewExtension.swift; sourceTree = "<group>"; };
+		59487A752599F4C900736F4C /* CountdownTimer3 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CountdownTimer3 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		5955ED1625920008002551E4 /* hourglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass.png; sourceTree = "<group>"; };
 		5955ED1B2592026D002551E4 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
 		5955ED1C2592026D002551E4 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
@@ -194,6 +195,7 @@
 		59305A0425910AE9002D2D79 /* CountdownTimer3 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				59487A752599F4C900736F4C /* CountdownTimer3 WatchKit Extension.entitlements */,
 				59305A2625911B07002D2D79 /* CalendarEvent.swift */,
 				59DA624F25923C3C005814AC /* CountdownTimer3 WatchKit ExtensionRelease.entitlements */,
 				59305A0725910AE9002D2D79 /* ContentView.swift */,
@@ -561,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "CountdownTimer3 WatchKit Extension/CountdownTimer3 WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CountdownTimer3 WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = RH3P6FM765;

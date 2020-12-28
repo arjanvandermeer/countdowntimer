@@ -11,7 +11,7 @@ struct SettingsView: View {
     let days = [ "1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
     let months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     let years = ["2020", "2021", "2022"]
-    let yearsOffset = 2020
+    let yearsOffset:Int
     
     let hours = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
     let minutes = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
@@ -26,53 +26,93 @@ struct SettingsView: View {
     
     @ObservedObject var event:CalendarEvent
     
+    init(event:CalendarEvent)
+    {
+        yearsOffset = Int(years[0])!
+        self.event = event;
+    }
     var body: some View {
-        ZStack{
-            VStack(alignment: .leading){
-                Text("Settings")
-                HStack{
-                    /*,onCommit: saveName*/
-                    Picker(selection: $day, label: Text("Day")){
-                        ForEach(0 ..< days.count) {
-                            Text(String(self.days[$0]))
+        GeometryReader { geometry in
+            ScrollView  {
+                ScrollViewReader { scrollView in
+                    VStack(alignment: .leading){
+                        Text("Settings")
+                        HStack{
+                            /*,onCommit: saveName*/
+                            Picker(selection: $day, label: Text("Day")){
+                                ForEach(0 ..< days.count) {
+                                    Text(String(self.days[$0]))
+                                }
+                            }
+                            Picker(selection: $month, label: Text("Month")) {
+                                ForEach(0 ..< months.count) {
+                                    Text(String(self.months[$0]))
+                                }
+                            }
+                            Picker(selection: $year, label: Text("Year")) {
+                                ForEach(0 ..< years.count) {
+                                    Text(String(self.years[$0]))
+                                }
+                            }
                         }
-                    }
-                    Picker(selection: $month, label: Text("Month")) {
-                        ForEach(0 ..< months.count) {
-                            Text(String(self.months[$0]))
+                        HStack{
+                            Picker(selection: $hour, label: Text("Hour")) {
+                                ForEach(0 ..< hours.count) {
+                                    Text(String(self.hours[$0]))
+                                }
+                            }
+                            Picker(selection: $minute, label: Text("Minute")) {
+                                ForEach(0 ..< minutes.count) {
+                                    Text(String(self.minutes[$0]))
+                                }
+                            }
+                            Picker(selection: $second, label: Text("Second")) {
+                                ForEach(0 ..< seconds.count) {
+                                    Text(String(self.seconds[$0]))
+                                }
+                            }
                         }
+                        /*
+                         Text(Self.formatter.string(from: seconds)!)
+                         .font(.title)
+                         .digitalCrownRotation(
+                         $seconds, from: 0, through: 60 * 60 * 24 - 1, by: 60)
+                         */
+                        
+                    }.onAppear(perform: loadCalendar).onDisappear(perform: saveCalendar).id("view").frame(
+                        width: geometry.size.width,
+                        height: geometry.size.height,
+                        alignment: .topLeading)
+
+                    Button(action: {
+                        setCalendar(month:12,day:25,hour:0,minute:0,second:0)
+                        scrollView.scrollTo("view")
+                    })
+                    {
+                        Text("Christmas")
                     }
-                    Picker(selection: $year, label: Text("Year")) {
-                        ForEach(0 ..< years.count) {
-                            Text(String(self.years[$0]))
-                        }
+                    Button(action: {
+                        setCalendar(month:12,day:31,hour:23,minute:59,second:0)
+                        scrollView.scrollTo("view")
+                    })
+                    {
+                        Text("New Years Eve")
                     }
+                    Button(action: {
+                        setCalendar(month:1,day:1,hour:0,minute:0,second:0)
+                        scrollView.scrollTo("view")
+                    })
+                    {
+                        Text("New Year")
+                    }
+
+                    //      return;
+                    //    }
+                    // .onAppear() {
+                    // scrollView.scrollTo("view")
                 }
-                HStack{
-                    Picker(selection: $hour, label: Text("Hour")) {
-                        ForEach(0 ..< hours.count) {
-                            Text(String(self.hours[$0]))
-                        }
-                    }
-                    Picker(selection: $minute, label: Text("Minute")) {
-                        ForEach(0 ..< minutes.count) {
-                            Text(String(self.minutes[$0]))
-                        }
-                    }
-                    Picker(selection: $second, label: Text("Second")) {
-                        ForEach(0 ..< seconds.count) {
-                            Text(String(self.seconds[$0]))
-                        }
-                    }
-                }
-                /*
-                 Text(Self.formatter.string(from: seconds)!)
-                 .font(.title)
-                 .digitalCrownRotation(
-                 $seconds, from: 0, through: 60 * 60 * 24 - 1, by: 60)
-                 */
-                
-            }.onAppear(perform: loadCalendar).onDisappear(perform: saveCalendar)
+                //                ).background(Color.black)
+            }
         }
     }
     func loadCalendar()
@@ -80,12 +120,21 @@ struct SettingsView: View {
         guard let eventData = event.getCalendarComponents() else {
             return
         }
-        self.year = eventData.year-yearsOffset
-        self.month = eventData.month-1
-        self.day=eventData.day-1
-        self.hour=eventData.hour
-        self.minute=eventData.minute
-        self.second=eventData.second
+        setCalendar(year:eventData.year, month:eventData.month, day:eventData.day, hour:eventData.hour, minute:eventData.minute, second:eventData.second)
+    }
+    func setCalendar(year:Int=0, month:Int, day:Int, hour:Int, minute:Int, second:Int)
+    {
+        if ( year == 0 )
+        {
+            self.year = CalendarEvent.determineYear(month: month, day: day, hour: hour, minute: minute, second: second)-yearsOffset
+        } else {
+            self.year = year-yearsOffset
+        }
+        self.month = month-1
+        self.day=day-1
+        self.hour=hour
+        self.minute=minute
+        self.second=second
     }
     func saveCalendar()
     {

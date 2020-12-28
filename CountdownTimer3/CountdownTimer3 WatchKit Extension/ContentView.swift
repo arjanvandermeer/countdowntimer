@@ -25,9 +25,7 @@ struct ContentView: View {
     
     init()
     {
-        print ("Running init")
         load()
-        print ("Init completed")
     }
     var body: some View {
         GeometryReader { geometry in

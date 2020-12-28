@@ -9,6 +9,15 @@ import SwiftUI
 import Combine
 
 
+extension Date {
+    
+    func get(_ type: Calendar.Component)-> String {
+        let calendar = Calendar.current
+        let t = calendar.component(type, from: self)
+        return (t < 10 ? "0\(t)" : t.description)
+    }
+}
+
 class CalendarEvent: ObservableObject {
     //@Published
     @Published var eventName=""
@@ -24,11 +33,25 @@ class CalendarEvent: ObservableObject {
     @Published var secondsLeft:Int?
     var timer = Timer()
     
+    static var thisYear:Int = Calendar.current.dateComponents([.year], from: Date()).year!
     init()
     {
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.refreshTimer()
         }
+    }
+    init ( description:String, year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int)
+    {
+        self.description = description
+        setCalendarComponents(year:year, month:month, day:day, hour:hour, minute:minute, second:second)
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.refreshTimer()
+        }
+    }
+    static func getCalendarComponents(date:Date)-> (year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int)?
+    {
+        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        return (components.year!, components.month!, components.day!, components.hour!, components.minute!, components.second!)
     }
     func getCalendarComponents()-> (year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int)?
     {
@@ -36,25 +59,47 @@ class CalendarEvent: ObservableObject {
         {
             return nil
         }
-        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: eventDate!)
-        return (components.year!, components.month!, components.day!, components.hour!, components.minute!, components.second!)
+        return CalendarEvent.getCalendarComponents(date:eventDate!)
+        //        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: eventDate!)
+        //        return (components.year!, components.month!, components.day!, components.hour!, components.minute!, components.second!)
     }
-    func setCalendarComponents(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int)
+    static func determineYear(month:Int, day:Int, hour:Int, minute:Int, second:Int)->Int
     {
-        if ( year>2020 && year<=2025 && month > 0 && month<=12 && day>=1 && day<=31 && hour>=0 && hour<=23 && minute>=0 && minute<=59 && second>=0 && second<=59)
+        if ( Calendar.current.date(from:DateComponents(year:thisYear, month:month, day:day, hour:hour, minute:minute, second:second))!>Date ())
+        {
+            return thisYear
+        } else {
+            return thisYear+1
+        }
+    }
+    func setCalendarComponents(year:Int=0, month:Int, day:Int, hour:Int, minute:Int, second:Int)
+    {
+        if ( (year==0 || year>=CalendarEvent.thisYear ) && month > 0 && month<=12 && day>=1 && day<=31 && hour>=0 && hour<=23 && minute>=0 && minute<=59 && second>=0 && second<=59)
         {
             var components = DateComponents()
             components.day = day
             components.month = month
-            components.year = year
+            
             components.hour = hour
             components.minute = minute
             components.second = second
+            
+            if ( year == 0 )
+            {
+                components.year = CalendarEvent.determineYear(month:month, day:day, hour:hour, minute:minute, second:second)
+            } else {
+                components.year = year
+            }
+            
             eventDate =  Calendar.current.date(from: components)
+            
+            self.refreshTimer()
+            
         } else {
             eventDate = nil
+            self.refreshTimer()
         }
-        self.refreshTimer()
+        
     }
     
     func getDescription()->String

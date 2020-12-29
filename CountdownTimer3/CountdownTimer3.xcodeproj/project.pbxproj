@@ -12,6 +12,10 @@
 		59305A0125910AE9002D2D79 /* CountdownTimer3 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 59305A0025910AE9002D2D79 /* CountdownTimer3 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		59305A1025910AEB002D2D79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59305A0F25910AEB002D2D79 /* Assets.xcassets */; };
 		59305A1325910AEB002D2D79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59305A1225910AEB002D2D79 /* Preview Assets.xcassets */; };
+		59487A93259A3E0800736F4C /* CountdownTextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59487A92259A3E0800736F4C /* CountdownTextFormatter.swift */; };
+		59487A99259A3E6E00736F4C /* StringInterpolationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59487A98259A3E6E00736F4C /* StringInterpolationExtension.swift */; };
+		59487AB7259A4BC300736F4C /* CountdownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59487AB6259A4BC300736F4C /* CountdownTableView.swift */; };
+		594D66A6259A767D00B770AF /* CountdownLabelFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594D66A5259A767D00B770AF /* CountdownLabelFormatter.swift */; };
 		5955ED1725920008002551E4 /* hourglass.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED1625920008002551E4 /* hourglass.png */; };
 		5955ED2A2592026E002551E4 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED1B2592026D002551E4 /* Icon-App-29x29@2x.png */; };
 		5955ED2B2592026E002551E4 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5955ED1C2592026D002551E4 /* iTunesArtwork@1x.png */; };
@@ -36,7 +40,7 @@
 		5981BF0C2598F1A0008EADE3 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0B25910AE9002D2D79 /* NotificationView.swift */; };
 		5981BF112598F1A2008EADE3 /* isHiddenViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */; };
 		5981BF162598F1A5008EADE3 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A2625911B07002D2D79 /* CalendarEvent.swift */; };
-		5981BF1B2598F1A7008EADE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0725910AE9002D2D79 /* ContentView.swift */; };
+		5981BF1B2598F1A7008EADE3 /* CountdownTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59305A0725910AE9002D2D79 /* CountdownTextView.swift */; };
 		5985FEB3259385D1006E3E37 /* CountdownTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985FEB2259385D1006E3E37 /* CountdownTimerTests.swift */; };
 		59DA625525923C44005814AC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DA625425923C44005814AC /* CloudKit.framework */; };
 /* End PBXBuildFile section */
@@ -90,7 +94,7 @@
 		593059FB25910AE8002D2D79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59305A0025910AE9002D2D79 /* CountdownTimer3 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CountdownTimer3 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59305A0525910AE9002D2D79 /* CountdownTimer3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer3App.swift; sourceTree = "<group>"; };
-		59305A0725910AE9002D2D79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		59305A0725910AE9002D2D79 /* CountdownTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTextView.swift; sourceTree = "<group>"; };
 		59305A0925910AE9002D2D79 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		59305A0B25910AE9002D2D79 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		59305A0D25910AEA002D2D79 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,10 @@
 		59305A2625911B07002D2D79 /* CalendarEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isHiddenViewExtension.swift; sourceTree = "<group>"; };
 		59487A752599F4C900736F4C /* CountdownTimer3 WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CountdownTimer3 WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		59487A92259A3E0800736F4C /* CountdownTextFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTextFormatter.swift; sourceTree = "<group>"; };
+		59487A98259A3E6E00736F4C /* StringInterpolationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringInterpolationExtension.swift; sourceTree = "<group>"; };
+		59487AB6259A4BC300736F4C /* CountdownTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTableView.swift; sourceTree = "<group>"; };
+		594D66A5259A767D00B770AF /* CountdownLabelFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownLabelFormatter.swift; sourceTree = "<group>"; };
 		5955ED1625920008002551E4 /* hourglass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hourglass.png; sourceTree = "<group>"; };
 		5955ED1B2592026D002551E4 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
 		5955ED1C2592026D002551E4 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
@@ -122,7 +130,6 @@
 		5985FEB2259385D1006E3E37 /* CountdownTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimerTests.swift; sourceTree = "<group>"; };
 		5985FEB4259385D1006E3E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5985FEBC2593AA55006E3E37 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		59DA624F25923C3C005814AC /* CountdownTimer3 WatchKit ExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CountdownTimer3 WatchKit ExtensionRelease.entitlements"; sourceTree = "<group>"; };
 		59DA625425923C44005814AC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -195,10 +202,13 @@
 		59305A0425910AE9002D2D79 /* CountdownTimer3 WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				59487A92259A3E0800736F4C /* CountdownTextFormatter.swift */,
+				594D66A5259A767D00B770AF /* CountdownLabelFormatter.swift */,
+				59305A0725910AE9002D2D79 /* CountdownTextView.swift */,
+				59487AB6259A4BC300736F4C /* CountdownTableView.swift */,
 				59487A752599F4C900736F4C /* CountdownTimer3 WatchKit Extension.entitlements */,
 				59305A2625911B07002D2D79 /* CalendarEvent.swift */,
-				59DA624F25923C3C005814AC /* CountdownTimer3 WatchKit ExtensionRelease.entitlements */,
-				59305A0725910AE9002D2D79 /* ContentView.swift */,
+				59487A98259A3E6E00736F4C /* StringInterpolationExtension.swift */,
 				59305A2B25914383002D2D79 /* isHiddenViewExtension.swift */,
 				59305A0B25910AE9002D2D79 /* NotificationView.swift */,
 				59305A0D25910AEA002D2D79 /* ComplicationController.swift */,
@@ -410,14 +420,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5981BF072598F19D008EADE3 /* NotificationController.swift in Sources */,
+				59487A93259A3E0800736F4C /* CountdownTextFormatter.swift in Sources */,
+				59487A99259A3E6E00736F4C /* StringInterpolationExtension.swift in Sources */,
 				5981BEF32598F18D008EADE3 /* SettingsView.swift in Sources */,
 				5981BF162598F1A5008EADE3 /* CalendarEvent.swift in Sources */,
+				594D66A6259A767D00B770AF /* CountdownLabelFormatter.swift in Sources */,
 				5981BF022598F19B008EADE3 /* ComplicationController.swift in Sources */,
 				5981BEF82598F191008EADE3 /* ColorExtension.swift in Sources */,
-				5981BF1B2598F1A7008EADE3 /* ContentView.swift in Sources */,
+				5981BF1B2598F1A7008EADE3 /* CountdownTextView.swift in Sources */,
 				5981BEFD2598F196008EADE3 /* CountdownTimer3App.swift in Sources */,
 				5981BF0C2598F1A0008EADE3 /* NotificationView.swift in Sources */,
 				5981BF112598F1A2008EADE3 /* isHiddenViewExtension.swift in Sources */,
+				59487AB7259A4BC300736F4C /* CountdownTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "CountdownTimer3 WatchKit Extension/CountdownTimer3 WatchKit Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CountdownTimer3 WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = RH3P6FM765;
@@ -588,7 +602,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "CountdownTimer3 WatchKit Extension/CountdownTimer3 WatchKit ExtensionRelease.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CountdownTimer3 WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = RH3P6FM765;

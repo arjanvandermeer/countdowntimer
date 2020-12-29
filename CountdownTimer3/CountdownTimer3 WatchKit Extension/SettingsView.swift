@@ -28,8 +28,8 @@ struct SettingsView: View {
     
     init(event:CalendarEvent)
     {
-        yearsOffset = Int(years[0])!
         self.event = event;
+        yearsOffset = Int(years[0])!
     }
     var body: some View {
         GeometryReader { geometry in
@@ -139,5 +139,11 @@ struct SettingsView: View {
     func saveCalendar()
     {
         event.setCalendarComponents(year: self.year+yearsOffset, month:self.month+1, day:self.day+1, hour:self.hour, minute:self.minute, second:self.second)
+    }
+}
+
+struct SettingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsView(event:CalendarEvent(description: "Guy Fawkes Day", year: 0, month: 11, day: 5, hour: 20, minute: 0, second: 0))
     }
 }

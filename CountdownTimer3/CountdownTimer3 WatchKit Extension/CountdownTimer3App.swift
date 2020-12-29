@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct CountdownTimer3App: App {
+    @ObservedObject var event=CalendarEvent.loadFromDefaults()
+
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                CountdownTextView(event:event)
             }
         }
-
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }
